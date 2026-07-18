@@ -31,7 +31,7 @@ public class CMS {
 	public static final String APP_NAME = "CMS";
 
 	/** Version */
-	public static final String APP_VERSION = "00.01";
+	public static final String APP_VERSION = "01.00";
 
 	/**
 	 * Create an application. The application frame, objects required for operation,
@@ -189,6 +189,7 @@ public class CMS {
 		makeButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				writeToSiteDescriptor();
+				Generator.doIt(siteDescriptor);
 				Mes.inf(Loc.get("the_pages_are_formed") + ".");
 			}
 		});
